@@ -30,9 +30,12 @@
               "src/assets"
             ],
             "styles": [
+
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.sass"
+
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -90,7 +93,12 @@
             "inlineStyleLanguage": "sass",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "bootstrap-icons.svg",
+                "input": "./node_modules/bootstrap-icons/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.sass"
@@ -100,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "90195a33-3c2c-4ce8-9850-cf2ce961c244"
   }
 }
